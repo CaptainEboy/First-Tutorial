@@ -1,3 +1,5 @@
+// https://srhussain99.medium.com/using-graphql-with-nodejs-and-mongodb-to-perform-crud-operations-55a3c20260f3
+
 const bodyParser = require('body-parser');
 const express  = require('express');
 const cors = require('cors');

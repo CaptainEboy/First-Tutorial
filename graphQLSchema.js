@@ -88,25 +88,12 @@ exports.resolvers = {
                 return res;
             })
             return result;
-            // const result = ProductModel.insertMany([
-            //     {
-            //         productName: args.productName,
-            //         category: args.category,
-            //         price: args.price,
-            //         imgPath: args.imgPath,
-            //         colors: args.colors
-            //     }
-            // ]).then((res) => {
-            //     if (res) {
-            //         return res;
-            //     }
-            // })
-            // return result;
         },
         deleteProduct:  async (parent, args) => {
             try {
                 await connect();
-                await ProductModel.findOneAndRemove({_id: args.id});
+                // await ProductModel.findOneAndRemove({_id: args.id});
+                await ProductModel.findOneAndDelete({_id: args.id});
                 return true;
             } catch (error) {
                 console.log('Error while delete:',error);
